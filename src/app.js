@@ -5,7 +5,10 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
+const userRoutes = require("./routes/users");
+
 applyMiddleware(app);
+app.use(userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Taskopia Server is running");
