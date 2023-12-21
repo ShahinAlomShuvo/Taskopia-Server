@@ -6,9 +6,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const userRoutes = require("./routes/users");
+const authenticationRoutes = require("./routes/authentication");
 
 applyMiddleware(app);
 app.use(userRoutes);
+app.use(authenticationRoutes);
 
 app.get("/", (req, res) => {
   res.send("Taskopia Server is running");
