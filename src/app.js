@@ -7,6 +7,7 @@ const port = process.env.PORT || 5000;
 
 const userRoutes = require("./routes/users");
 const authenticationRoutes = require("./routes/authentication");
+const taskRoutes = require("./routes/tasks");
 
 applyMiddleware(app);
 app.use(userRoutes);
@@ -15,6 +16,8 @@ app.use(authenticationRoutes);
 app.get("/", (req, res) => {
   res.send("Taskopia Server is running");
 });
+
+app.use(taskRoutes);
 
 app.all("*", (req, res, next) => {
   const err = new Error(`The Requested Url is invalid: [${req.url}]`);
