@@ -9,7 +9,7 @@ const {
 const router = express.Router();
 router.get("/get-todo-task/:email", getTodoTasks);
 router.get("/get-ongoing-task/:email", getOngoingTasks);
-router.get("/get-completed-task", getCompletedTasks);
+router.get("/get-completed-task/:email", getCompletedTasks);
 router.post("/add-todo-task", addTodoTask);
 
 module.exports = router;

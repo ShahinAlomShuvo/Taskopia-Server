@@ -2,7 +2,11 @@ const Tasks = require("../../models/task");
 
 const getCompletedTasks = async (req, res) => {
   try {
-    const tasks = await Tasks.find({ category: "completed" });
+    const { email } = req.params;
+    const tasks = await Tasks.find({
+      category: "completed",
+      email: decodeURI(email),
+    });
     res.json(tasks);
   } catch (err) {
     console.error(err);
