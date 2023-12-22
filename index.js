@@ -1,4 +1,4 @@
-/* require("dotenv").config();
+require("dotenv").config();
 const http = require("http");
 const app = require("./src/app");
 const connectDB = require("./src/db/connectDB");
@@ -11,4 +11,3 @@ const main = async () => {
   });
 };
 main();
- */

@@ -1,9 +1,7 @@
 const express = require("express");
 const applyMiddleware = require("./middlewares/applyMiddleware");
-const connectDB = require("./db/connectDB");
 require("dotenv").config();
 const app = express();
-const port = process.env.PORT || 5000;
 
 const userRoutes = require("./routes/users");
 const authenticationRoutes = require("./routes/authentication");
@@ -30,13 +28,5 @@ app.use((err, req, res, next) => {
     message: err.message,
   });
 });
-
-const main = async () => {
-  await connectDB();
-  app.listen(port, () => {
-    console.log(`Taskopia is running on port ${port}`);
-  });
-};
-main();
 
 module.exports = app;
