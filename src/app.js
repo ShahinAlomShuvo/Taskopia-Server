@@ -34,7 +34,7 @@ app.use((err, req, res, next) => {
 const main = async () => {
   await connectDB();
   app.listen(port, () => {
-    console.log(`ContestHub is running on port ${port}`);
+    console.log(`Taskopia is running on port ${port}`);
   });
 };
 main();

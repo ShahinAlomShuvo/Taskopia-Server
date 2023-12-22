@@ -17,6 +17,10 @@ const TaskSchema = new Schema({
     type: String,
     required: true,
   },
+  category: {
+    type: String,
+    default: "",
+  },
 });
 
 const Tasks = model("todoTask", TaskSchema);

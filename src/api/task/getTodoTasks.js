@@ -2,9 +2,7 @@ const Tasks = require("../../models/task");
 
 const getTodoTasks = async (req, res) => {
   try {
-    const tasks = await Tasks.find();
-    console.log(tasks);
-
+    const tasks = await Tasks.find({ category: "todo" });
     res.json(tasks);
   } catch (err) {
     console.error(err);

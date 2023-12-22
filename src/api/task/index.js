@@ -1,3 +1,4 @@
 const getTodoTasks = require("./getTodoTasks");
+const addTodoTask = require("./addTodoTask");
 
-module.exports = { getTodoTasks };
+module.exports = { getTodoTasks, addTodoTask };
