@@ -4,6 +4,7 @@ const getOngoingTasks = require("./getOngoingTasks");
 const getCompletedTasks = require("./getCompletedTasks");
 const deleteTask = require("./deleteTask");
 const getSingleTask = require("./getSingleTask");
+const updateSingleTask = require("./updateSingleTask");
 
 module.exports = {
   getTodoTasks,
@@ -12,4 +13,5 @@ module.exports = {
   getCompletedTasks,
   getSingleTask,
   deleteTask,
+  updateSingleTask,
 };
